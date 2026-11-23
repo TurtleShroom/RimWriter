@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingDef ParentName="Jecrell_Book">
+		<defName>Jecrell_BookJournal</defName>
+		<label>journal</label>
+		<description>A typed collection of journal pages.</description>
+		<graphicData>
+		  <texPath>Item/Resource/Journal/Jecrell_JournalBook</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		  <!-- <drawSize>0.5</drawSize> -->
+		</graphicData>
+		<uiIconPath>Item/Resource/Journal/Jecrell_JournalBook</uiIconPath>
+		<techLevel>Medieval</techLevel>
+		<comps>
+		  <li Class="CompProperties_Forbiddable"></li>
+		  <li>
+			<compClass>CompQuality</compClass>
+		  </li>
+		  <!--
+		  <li Class="CompProperties_Art">
+			<nameMaker>RimWriterNamerJournal</nameMaker>
+			<descriptionMaker>RimWriterArtDescription_Journal</descriptionMaker>
+		  </li>
+		  -->
+			<li Class="CompProperties_Book">
+				<nameMaker>RimWriterNamerJournal</nameMaker>
+				<descriptionMaker>RimWriterArtDescription_Journal</descriptionMaker>
+				<ageYearsRange>0~200</ageYearsRange>
+				<openGraphic>
+					<texPath>Item/Resource/Journal/Jecrell_JournalBook</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<!-- <drawSize>0.7</drawSize> -->
+				</openGraphic>
+				<verticalGraphic>
+					<texPath>Item/Resource/Vertical/TSP_Journal_OnShelf/TSP_Journal_OnShelf</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<addTopAltitudeBias>true</addTopAltitudeBias>
+				</verticalGraphic>
+				<doers>
+					<!-- <li Class="BookOutcomeProperties_GainSkillExp"></li> -->
+					<li Class="BookOutcomeProperties_JoyFactorModifier"></li>
+					<li Class="BookOutcomeProperties_GiveQuest">
+						<questChance>0.66</questChance>
+					</li>
+				</doers>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>Book</li>
+			<li>Books</li>
+			<li>DankPyon_Tale</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>

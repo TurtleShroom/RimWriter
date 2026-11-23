@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<RecipeDef ParentName="TSP_RimWriter_MakeAncientText">
+		<defName>TSP_RimWriter_Tablet</defName>
+		<label>carve tablet</label>
+		<description>Carve inscriptions into stone to make a permanent, lasting record of an event or story.</description>
+		<unfinishedThingDef>UnfinishedWritingTablet</unfinishedThingDef>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<recipeUsers>
+			<!-- Inherits from the Base -->
+			<li>CraftingSpot</li>
+			<li>TableStonecutter</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_StonecuttingSpot</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<customSummary>stones</customSummary>
+					<categories>
+						<li>StoneBlocks</li>
+					</categories>
+					<thingDefs></thingDefs>
+				</filter>
+				<count>35</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter Inherit="False">
+			<categories>
+				<li>StoneBlocks</li>
+			</categories>
+			<thingDefs></thingDefs>
+			<disallowedThingDefs></disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products Inherit="False">
+			<Jecrell_Tablet>1</Jecrell_Tablet>
+		</products>
+		<researchPrerequisites Inherit="False">
+			<li>Stonecutting</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="TSP_RimWriter_MakeAncientText">
+		<defName>TSP_RimWriter_Scroll</defName>
+		<label>inscribe scroll</label>
+		<description>Write inscriptions onto a tanned strip of leather, roll it up, and bind it.</description>
+		<unfinishedThingDef>UnfinishedWritingScroll</unfinishedThingDef>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+		<recipeUsers>
+			<!-- Inherits from the Base -->
+			<li>CraftingSpot</li>
+			<li>ButcherSpot</li>
+			<li>TableButcher</li>
+		</recipeUsers>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<customSummary>leather</customSummary>
+					<categories>
+						<li>Leathers</li>
+					</categories>
+					<thingDefs></thingDefs>
+					<disallowedCategories>
+						<li>Fabrics</li>
+					</disallowedCategories>
+				</filter>
+				<count>35</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter Inherit="False">
+			<categories>
+				<li>Leathers</li>
+			</categories>
+			<thingDefs></thingDefs>
+			<disallowedCategories>
+				<li>Fabrics</li>
+			</disallowedCategories>
+			<disallowedThingDefs></disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products Inherit="False">
+			<Jecrell_LeatherScroll>1</Jecrell_LeatherScroll>
+		</products>
+		<researchPrerequisites Inherit="False">
+			<li>VBE_Writing</li>
+		</researchPrerequisites>
+	</RecipeDef>
+</Defs>

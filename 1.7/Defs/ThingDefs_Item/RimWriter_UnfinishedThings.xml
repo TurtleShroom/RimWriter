@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <ThingDef Name="RimWriter_UnfinishedWriting" Abstract="True">
+    <thingClass>UnfinishedThing</thingClass>
+    <category>Item</category>
+    <altitudeLayer>Item</altitudeLayer>
+    <useHitPoints>true</useHitPoints>
+    <isUnfinishedThing>true</isUnfinishedThing>
+    <selectable>true</selectable>
+    <tradeability>None</tradeability>
+    <drawerType>RealtimeOnly</drawerType>
+	<stuffCategories Inherit="False" IsNull="True"></stuffCategories>
+    <!-- For CompForbiddable -->
+    <statBases>
+      <Mass>0.001</Mass>
+      <MaxHitPoints>1</MaxHitPoints>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"></li>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>0</pathCost>
+    <thingCategories>
+      <li>Unfinished</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="RimWriter_UnfinishedWriting">
+    <defName>UnfinishedWriting</defName>
+    <label>unfinished writing</label>
+    <graphicData>
+      <texPath>Item/Unfinished/Jecrell_Page</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="RimWriter_UnfinishedWriting">
+    <defName>UnfinishedJournal</defName>
+    <label>unfinished journal</label>
+    <graphicData>
+      <texPath>Item/Unfinished/Jecrell_Journal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.48</drawSize>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="RimWriter_UnfinishedWriting">
+    <defName>UnfinishedWritingTablet</defName>
+    <label>unfinished writing (tablet)</label>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>Item/Unfinished/Jecrell_Tablet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="RimWriter_UnfinishedWriting">
+    <defName>UnfinishedWritingScroll</defName>
+    <label>unfinished writing (scroll)</label>
+    <graphicData>
+      <texPath>Item/Unfinished/Jecrell_Scroll</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef> 
+  
+	<ThingDef ParentName="RimWriter_UnfinishedWriting">
+		<defName>TSP_RimWriter_UnfinishedWritingMaterials</defName>
+		<label>unfinished writing materials</label>
+		<graphicData>
+			<texPath>Item/Unfinished/Jecrell_Scroll</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories Inherit="False">
+			<li>Fabric</li>
+			<li>Leathery</li>
+			<li>Stony</li>
+			<li>Metallic</li>
+			<li>Woody</li>
+
+			<!-- Mod support -->
+			<li MayRequire="TaosChagic.Igloo">Snowy</li>
+			<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+			<li MayRequire="Dubwise.Rimefeller">Composite</li>
+			<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+			<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+			<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+			<li MayRequire="sarg.rimbees">RB_Waxy</li>
+			<li MayRequire="eltwofour.mantodeanrace">L24_Stuff_MantodeanOrganic</li>
+			<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+			<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
+			<li MayRequire="gguake.race.vivi">VV_Wax</li>
+		</stuffCategories>
+	</ThingDef> 
+</Defs>

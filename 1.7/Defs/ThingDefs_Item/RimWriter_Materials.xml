@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <ThingDef ParentName="Jecrell_Page">
+    <defName>Jecrell_Paper</defName>
+    <label>paper</label>
+    <description>A material made from wood used for book making.</description>
+	<techLevel>Medieval</techLevel>
+  </ThingDef>
+  
+  <ThingDef ParentName="Jecrell_Page">
+    <defName>Jecrell_Parchment</defName>
+    <label>parchment</label>
+    <description>A long lasting material made from hides or skin used for book making.</description>
+	<techLevel>Neolithic</techLevel>
+  </ThingDef>
+  
+  <ThingDef ParentName="Jecrell_Page">
+    <defName>Jecrell_ClothPaper</defName>
+    <label>cloth paper</label>
+    <description>A material made from fabric used for book making, sometimes also referred to as fabric paper or rag paper. Weak and easily torn. Highly flammable.</description>
+	<statBases>
+		<MaxHitPoints>1</MaxHitPoints>
+		<Flammability>12</Flammability>
+	</statBases>
+	<techLevel>Neolithic</techLevel>
+  </ThingDef>
+</Defs>
