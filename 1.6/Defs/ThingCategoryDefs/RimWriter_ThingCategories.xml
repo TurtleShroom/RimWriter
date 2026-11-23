@@ -12,16 +12,16 @@
   <ThingCategoryDef>
     <defName>RimWriter_BookMaterials</defName>
     <label>materials for books</label>
-    <parent>Manufactured</parent>
+    <parent>ResourcesRaw</parent>
     <resourceReadoutRoot>true</resourceReadoutRoot>
-    <iconPath>UI/Icons/ThingCategories/jecrellBook</iconPath>
+    <iconPath>Item/Unfinished/Jecrell_Unfinished</iconPath>
   </ThingCategoryDef>
   
   <ThingCategoryDef>
     <defName>RimWriter_Tablets</defName>
     <label>tablets</label>
     <parent>RimWriter_Writings</parent>
-    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <resourceReadoutRoot>false</resourceReadoutRoot>
     <iconPath>UI/Icons/ThingCategories/jecrellTablet</iconPath>
   </ThingCategoryDef>
   
@@ -29,7 +29,7 @@
     <defName>RimWriter_Books</defName>
     <label>books</label>
     <parent>RimWriter_Writings</parent>
-    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <resourceReadoutRoot>false</resourceReadoutRoot>
     <iconPath>UI/Icons/ThingCategories/jecrellBook</iconPath>
   </ThingCategoryDef>
   
@@ -37,7 +37,7 @@
     <defName>RimWriter_Scrolls</defName>
     <label>scrolls</label>
     <parent>RimWriter_Writings</parent>
-    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <resourceReadoutRoot>false</resourceReadoutRoot>
     <iconPath>UI/Icons/ThingCategories/jecrellScroll</iconPath>
   </ThingCategoryDef>
 </Defs>
