@@ -4,9 +4,9 @@
 	<RecipeDef ParentName="MakeBookAtTypewriter">
 		<defName>TSP_RimWriter_VFEBO_MakeNewspaper</defName>
 		<label>publish newspapers</label>
-		<description>Quickly record a brief article about a current event in one's colony on newsprint.</description>
+		<description>Quickly record a brief article on newsprint about a current event in one's colony.</description>
 		<jobString>Printing newspapers.</jobString>
-		<workAmount>2100</workAmount>
+		<workAmount>1900</workAmount>
 		<unfinishedThingDef>VBE_UnfinishedNewspaper</unfinishedThingDef>
 		<effectWorking>Sculpt</effectWorking>
 		<soundWorking>Recipe_Write</soundWorking>
@@ -24,7 +24,7 @@
 			</li>
 		</ingredients>
 		<products Inherit="False">
-			<VBE_Newspaper>2</VBE_Newspaper>
+			<VBE_Newspaper>1</VBE_Newspaper>
 		</products>
 	</RecipeDef>
 </Defs>

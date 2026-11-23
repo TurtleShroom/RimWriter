@@ -11,7 +11,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <onGroundRandomRotateAngle>15</onGroundRandomRotateAngle>
-      <!-- <drawSize>0.5</drawSize> -->
+      <drawSize>1.4</drawSize>
     </graphicData>
     <statBases>
       <Mass>0.05</Mass>
@@ -62,14 +62,14 @@
 			<li Class="CompProperties_Book">
 				<nameMaker>RimWriterNamerScroll</nameMaker>
 				<descriptionMaker>RimWriterArtDescription_Book</descriptionMaker>
-				<ageYearsRange>3000~5550</ageYearsRange>
+				<ageYearsRange>4000~5550</ageYearsRange>
 				<openGraphic>
 					<texPath>Item/Resource/Journal/Jecrell_Scroll</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<!-- <drawSize>0.7</drawSize> -->
+					<drawSize>1.7</drawSize>
 				</openGraphic>
 				<verticalGraphic>
-					<texPath>Things/Item/Book/Novel/Novel_Vertical</texPath>
+					<texPath>Item/Resource/Vertical/TSP_Scroll_OnShelf/TSP_Scroll_OnShelf</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<addTopAltitudeBias>true</addTopAltitudeBias>
 				</verticalGraphic>
@@ -77,7 +77,7 @@
 					<!-- <li Class="BookOutcomeProperties_GainSkillExp"></li> -->
 					<li Class="BookOutcomeProperties_JoyFactorModifier"></li>
 					<li Class="BookOutcomeProperties_GiveQuest">
-						<questChance>0.1</questChance>
+						<questChance>0.33</questChance>
 					</li>
 				</doers>
 			</li>

@@ -35,7 +35,7 @@
 					<!-- <drawSize>0.7</drawSize> -->
 				</openGraphic>
 				<verticalGraphic>
-					<texPath>Things/Item/Book/Novel/Novel_Vertical</texPath>
+					<texPath>Item/Resource/Vertical/TSP_Journal_OnShelf/TSP_Journal_OnShelf</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<addTopAltitudeBias>true</addTopAltitudeBias>
 				</verticalGraphic>
@@ -43,7 +43,7 @@
 					<!-- <li Class="BookOutcomeProperties_GainSkillExp"></li> -->
 					<li Class="BookOutcomeProperties_JoyFactorModifier"></li>
 					<li Class="BookOutcomeProperties_GiveQuest">
-						<questChance>0.33</questChance>
+						<questChance>0.66</questChance>
 					</li>
 				</doers>
 			</li>

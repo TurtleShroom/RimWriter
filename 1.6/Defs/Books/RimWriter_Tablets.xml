@@ -11,7 +11,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <onGroundRandomRotateAngle>15</onGroundRandomRotateAngle>
-      <!-- <drawSize>0.5</drawSize> -->
+      <drawSize>1.25</drawSize>
     </graphicData>
     <statBases>
       <Mass>5</Mass>
@@ -64,14 +64,14 @@
 			<descriptionMaker>RimWriterArtDescription_Book</descriptionMaker>
 			<ageYearsRange>5610~10200</ageYearsRange>
 			<openGraphic>
-			  <texPath>Item/Resource/Journal/Jecrell_Tablet</texPath>
-			  <graphicClass>Graphic_Single</graphicClass>
-			  <!-- <drawSize>0.7</drawSize> -->
+				<texPath>Item/Resource/Journal/Jecrell_Tablet</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<drawSize>1.25</drawSize>
 			</openGraphic>
 			<verticalGraphic>
-			  <texPath>Item/Resource/Journal/Jecrell_Tablet</texPath>
-			  <graphicClass>Graphic_Single</graphicClass>
-			  <addTopAltitudeBias>true</addTopAltitudeBias>
+				<texPath>Item/Resource/Vertical/TSP_StoneTablet_OnShelf/TSP_StoneTablet_OnShelf</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<addTopAltitudeBias>true</addTopAltitudeBias>
 			</verticalGraphic>
 			<doers>
 			  <li Class="BookOutcomeProperties_GainSkillExp"></li>
