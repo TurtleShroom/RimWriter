@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="VBE_WritersTable"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/costList</xpath>
+					<success>Always</success>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VBE_WritersTable"]/costList</xpath>
+					<success>Always</success>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/stuffCategories</xpath>
+					<success>Always</success>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VBE_WritersTable"]/stuffCategories</xpath>
+					<success>Always</success>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/costStuffCount</xpath>
+					<success>Always</success>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VBE_WritersTable"]/costStuffCount</xpath>
+					<success>Always</success>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]</xpath>
+					<success>Always</success>
+					<value>
+						<stuffCategories>
+							<li>Stony</li>
+							<li>Metallic</li>
+							<li>Woody</li>
+
+							<!-- Mod support -->
+							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+							<li MayRequire="Dubwise.Rimefeller">Composite</li>
+							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+							<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+							<li MayRequire="sarg.rimbees">RB_Waxy</li>
+							<li MayRequire="eltwofour.mantodeanrace">L24_Stuff_MantodeanOrganic</li>
+							<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+							<li MayRequire="gguake.race.vivi">VV_Wax</li>
+						</stuffCategories>
+						<costStuffCount>150</costStuffCount>
+						<costList>
+							<ComponentIndustrial>1</ComponentIndustrial>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VBE_WritersTable"]</xpath>
+					<success>Always</success>
+					<value>
+						<stuffCategories>
+							<li>Stony</li>
+							<li>Metallic</li>
+							<li>Woody</li>
+
+							<!-- Mod support -->
+							<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+							<li MayRequire="Dubwise.Rimefeller">Composite</li>
+							<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+							<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+							<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+							<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+							<li MayRequire="sarg.rimbees">RB_Waxy</li>
+							<li MayRequire="eltwofour.mantodeanrace">L24_Stuff_MantodeanOrganic</li>
+							<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+							<li MayRequire="gguake.race.vivi">VV_Wax</li>
+						</stuffCategories>
+						<costStuffCount>100</costStuffCount>
+						<costList>
+							<DankPyon_ComponentBasic MayRequire="dankpyon.medieval.overhaul">1</DankPyon_ComponentBasic>
+						</costList>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VBE_TypewritersTable"]/constructEffect</xpath>
+					<success>Always</success>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="VBE_WritersTable"]/constructEffect</xpath>
+					<success>Always</success>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

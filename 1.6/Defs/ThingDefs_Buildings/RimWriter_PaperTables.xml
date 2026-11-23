@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef Name="PapermakingBenchBase" ParentName="BenchBase" Abstract="True">
-    <thingCategories Inherit="False">
-      <li>BuildingsProduction</li>
-    </thingCategories>
-  </ThingDef>
+	<ThingDef Name="PapermakingBenchBase" ParentName="BenchBase" Abstract="True">
+		<thingCategories Inherit="False">
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li MayRequire="dankpyon.medieval.overhaul">DankPyon_QuillAndInkwell</li>
+					<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Stack_Books</li>
+					<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Stack_Paper</li>
+					<li MayRequire="dankpyon.medieval.overhaul">DankPyon_PaperHangingRack</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+  
   <ThingDef Name="RimWriter_PaperTable" ParentName="PapermakingBenchBase">
     <defName>RimWriter_PapermakingBench</defName>
     <label>papermaking table</label>
@@ -25,13 +36,27 @@
     <!-- interactionCellIconReverse>true</interactionCellIconReverse -->
     <!-- defaultPlacingRot>South</defaultPlacingRot -->
     <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
+		<li>Metallic</li>
+		<li>Woody</li>
+		<li>Stony</li>
+
+		<!-- Mod support -->
+		<li MayRequire="TaosChagic.Igloo">Snowy</li>
+		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+		<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+		<li MayRequire="sarg.rimbees">RB_Waxy</li>
+		<li MayRequire="eltwofour.mantodeanrace">L24_Stuff_MantodeanOrganic</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
+		<li MayRequire="gguake.race.vivi">VV_Wax</li>
     </stuffCategories>
     <costList>
-      <Steel>5</Steel>
-    </costList>
+		<DankPyon_ComponentBasic MayRequire="dankpyon.medieval.overhaul">1</DankPyon_ComponentBasic>
+	</costList>
     <costStuffCount>100</costStuffCount>
     <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
@@ -45,8 +70,10 @@
       <Flammability>1.0</Flammability>
       <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
     </statBases>
-    <researchPrerequisites>
-      <li>RimWriter_TechSimpleWriting</li>
+    <researchPrerequisites Inherit="False">
+      <!-- <li>RimWriter_TechSimpleWriting</li> -->
+	  <li>VBE_Writing</li>
+	  <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Presser</li>
     </researchPrerequisites>
     <size>(3,1)</size>
     <designationCategory>Production</designationCategory>
@@ -64,6 +91,7 @@
     <designationHotKey>Misc11</designationHotKey>
     <storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
   </ThingDef>
+  
   <ThingDef ParentName="RimWriter_PaperTable">
     <defName>RimWriter_PapermakingBenchElectric</defName>
     <label>electric papermaking station</label>
@@ -88,8 +116,8 @@
     </statBases>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <costList inherit="False">
-      <Steel>20</Steel>
-    </costList>
+		<ComponentIndustrial>1</ComponentIndustrial>
+	</costList>
     <building>
       <unpoweredWorkTableWorkSpeedFactor>0.5</unpoweredWorkTableWorkSpeedFactor>
     </building>
@@ -99,20 +127,23 @@
         <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>120</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Flickable"></li>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
           <li>ToolCabinet</li>
         </linkableFacilities>
       </li>
-      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Breakdownable"></li>
     </comps>
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
-    <researchPrerequisites>
-      <li>RimWriter_TechSimpleWriting</li>
+    <researchPrerequisites Inherit="False">
+      <!-- <li>RimWriter_TechSimpleWriting</li> -->
+	  <li>VBE_Printing</li>
       <li>Electricity</li>
+	  <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Presser</li>
     </researchPrerequisites>
+	<storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
   </ThingDef>
 </Defs>

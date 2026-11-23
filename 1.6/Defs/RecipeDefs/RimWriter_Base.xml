@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<RecipeDef Name="MakeBookByHand" Abstract="True">
+		<jobString>Writing a book.</jobString>
+		<workAmount>20000</workAmount>
+		<workSpeedStat>VBE_WritingSpeed</workSpeedStat>
+		<workSkill>Artistic</workSkill>
+		<unfinishedThingDef>UnfinishedWriting</unfinishedThingDef>
+		<soundWorking>RimWriter_SoundManualPencil</soundWorking>
+		<effectWorking>Tailor</effectWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers>
+			<!-- <li>VBE_WritersTable</li> -->
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Book_ScribeTable</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>raw writing materials</customSummary>
+					<categories>
+						<li>RimWriter_BookMaterials</li>
+					</categories>
+					<thingDefs></thingDefs>
+				</filter>
+				<count>110</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>RimWriter_BookMaterials</li>
+			</categories>
+			<thingDefs></thingDefs>
+			<disallowedThingDefs></disallowedThingDefs>
+		</fixedIngredientFilter>
+		<researchPrerequisites Inherit="False">
+			<li>VBE_Writing</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MakeBookByHand" Name="MakeBookAtDesk" Abstract="True">
+		<label>author a book at a desk</label>
+		<description>Makes a book at a writing table by inking out on flattened stationery such as paper or parchment and binding together the pieces.</description>
+		<jobString>Writing a book.</jobString>
+		<workSpeedStat>VBE_WritingSpeed</workSpeedStat>
+		<workAmount>15000</workAmount>
+		<recipeUsers Inherit="False">
+			<!-- <li>RimWriter_TableWriting</li> -->
+			<li>VBE_WritersTable</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Book_ScribeTable</li>
+		</recipeUsers>
+		<researchPrerequisites Inherit="False">
+			<li>VBE_Writing</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MakeBookAtDesk" Name="MakeBookAtTypewriter" Abstract="True">
+		<label>author a book at a typewriter</label>
+		<description>Makes a book at a typewriter by typing out on flattened stationery such as paper or parchment and binding together the pieces.</description>
+		<soundWorking>RimWriter_SoundManualTypewriter</soundWorking>
+		<jobString>Typing a book.</jobString>
+		<workSpeedStat>VBE_WritingSpeed</workSpeedStat>
+		<workAmount>10000</workAmount>
+		<recipeUsers Inherit="False">
+			<!-- <li>RimWriter_TableTypewriter</li> -->
+			<li>VBE_TypewritersTable</li>
+		</recipeUsers>
+		<researchPrerequisites Inherit="False">
+			<li>VBE_Printing</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef Name="TSP_RimWriter_MakeAncientText" ParentName="MakeBookByHand" Abstract="True">
+		<jobString>Writing an ancient text.</jobString>
+		<workAmount>8000</workAmount>
+		<workSpeedStat>VBE_WritingSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<unfinishedThingDef>UnfinishedWriting</unfinishedThingDef>
+		<soundWorking>RimWriter_SoundManualPencil</soundWorking>
+		<effectWorking>Tailor</effectWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers Inherit="False">
+			<li>VBE_WritersTable</li>
+			<li>VBE_TypewritersTable</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Book_ScribeTable</li>
+		</recipeUsers>
+		<researchPrerequisites Inherit="False">
+			<li>VBE_Writing</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef Name="RimWriter_MakePage" Abstract="True">
+		<label>make paper at paper making bench</label>
+		<description>Makes pages from a few logs of wood.</description>
+		<jobString>Making pages.</jobString>
+		<workAmount>3500</workAmount>
+		<workSpeedStat>VBE_WritingSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<unfinishedThingDef>TSP_RimWriter_UnfinishedWritingMaterials</unfinishedThingDef>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<effectWorking>Tailor</effectWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<researchPrerequisites Inherit="False">
+			<li>VBE_Writing</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Presser</li>
+		</researchPrerequisites>
+		<conceptLearned>RimWriter_PaperMaking</conceptLearned>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="RimWriter_MakePage" Name="RimWriter_MakeParchment" Abstract="True">
+		<label>make parchment</label>
+		<jobString>Making parchment.</jobString>
+		<workAmount>3500</workAmount>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Leathers</li>
+			</categories>
+			<thingDefs></thingDefs>
+			<disallowedCategories>
+				<li>Fabrics</li>
+			</disallowedCategories>
+		</fixedIngredientFilter>
+		<researchPrerequisites Inherit="False">
+			<li>VBE_Writing</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Presser</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="RimWriter_MakePage" Name="RimWriter_MakeClothPaper" Abstract="True">
+		<label>make cloth paper</label>
+		<jobString>Making cloth paper.</jobString>
+		<workAmount>1900</workAmount>
+		<workSpeedStat>VBE_WritingSpeed</workSpeedStat>
+		<researchPrerequisites Inherit="False">
+			<li>VBE_Writing</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Presser</li>
+		</researchPrerequisites>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Textiles</li>
+					</categories>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+					<disallowedThingDefs>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Mixture_Paper</li>
+					</disallowedThingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Textiles</li>
+			</categories>
+			<thingDefs>
+				<li>Cloth</li>
+			</thingDefs>
+			<disallowedThingDefs>
+				<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Mixture_Paper</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+</Defs>

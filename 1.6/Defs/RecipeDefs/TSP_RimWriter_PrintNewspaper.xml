@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<RecipeDef ParentName="MakeBookAtTypewriter">
+		<defName>TSP_RimWriter_VFEBO_MakeNewspaper</defName>
+		<label>publish newspapers</label>
+		<description>Quickly record a brief article about a current event in one's colony on newsprint.</description>
+		<jobString>Printing newspapers.</jobString>
+		<workAmount>2100</workAmount>
+		<unfinishedThingDef>VBE_UnfinishedNewspaper</unfinishedThingDef>
+		<effectWorking>Sculpt</effectWorking>
+		<soundWorking>Recipe_Write</soundWorking>
+		<ingredients Inherit="False">
+			<li>
+				<filter>
+					<categories>
+						<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+					</categories>
+					<thingDefs>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products Inherit="False">
+			<VBE_Newspaper>2</VBE_Newspaper>
+		</products>
+	</RecipeDef>
+</Defs>

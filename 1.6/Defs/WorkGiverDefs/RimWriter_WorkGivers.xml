@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
+	<!--
   <WorkGiverDef>
     <defName>RimWriter_ReturnBooks</defName>
     <label>return books</label>
@@ -12,15 +14,21 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </WorkGiverDef>
+	-->
+  
   <WorkGiverDef>
     <defName>DoBillsWrite</defName>
     <label>write</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Art</workType>
-    <priorityInType>100</priorityInType>
+    <priorityInType>10</priorityInType>
     <fixedBillGiverDefs>
+		<!--
       <li>RimWriter_TableTypewriter</li>
       <li>RimWriter_TableWriting</li>
+		-->
+		<li>VBE_WritersTable</li>
+		<li>VBE_TypewritersTable</li>
     </fixedBillGiverDefs>
     <verb>write</verb>
     <gerund>writing at</gerund>
@@ -29,21 +37,20 @@
     </requiredCapacities>
     <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
+  
   <WorkGiverDef>
     <defName>DoBillsPapermaking</defName>
     <label>make</label>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Art</workType>
-    <priorityInType>100</priorityInType>
+    <workType>Crafting</workType>
+    <priorityInType>300</priorityInType>
     <fixedBillGiverDefs>
       <li>RimWriter_PapermakingBench</li>
       <li>RimWriter_PapermakingBenchElectric</li>
     </fixedBillGiverDefs>
-    <verb>make</verb>
-    <gerund>making at</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
+    <verb>make paper</verb>
+    <gerund>making paper at</gerund>
+    <requiredCapacities></requiredCapacities>
     <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
 </Defs>

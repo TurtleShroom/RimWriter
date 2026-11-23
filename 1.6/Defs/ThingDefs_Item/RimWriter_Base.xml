@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingDef Name="Jecrell_Book" ParentName="BookBase" Abstract="True">
+		<thingClass>Book</thingClass>
+		<techLevel>Neolithic</techLevel>
+		<category>Item</category>
+		<pathCost>1</pathCost>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<Mass>1</Mass>
+			<WorkToMake>3500</WorkToMake>
+			<MaxHitPoints>20</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<SellPriceFactor>1.1</SellPriceFactor>
+		</statBases>
+		<tradeability>All</tradeability>
+		<!--
+		<stuffCategories Inherit="False">
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>5</costStuffCount>
+		-->
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<thingCategories Inherit="False">
+			<li>RimWriter_Books</li>
+		</thingCategories>
+		<inspectorTabs Inherit="Fa;se">
+			<li>ITab_Book</li>
+		</inspectorTabs>
+		<!-- <filthLeaving>Filth_Trash</filthLeaving> -->
+	</ThingDef>
+	
+	<ThingDef Name="Jecrell_Page" ParentName="ResourceBase" Abstract="True">
+		<!-- <thingClass>RimWriter.Page</thingClass> -->
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+			<texPath>Item/Unfinished/Jecrell_Page</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<category>Item</category>
+		<stackLimit>5000</stackLimit>
+		<pathCost>0</pathCost>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<MarketValue>0.001</MarketValue>
+			<Mass>0.001</Mass>
+			<WorkToMake>1500</WorkToMake>
+			<MaxHitPoints>20</MaxHitPoints>
+			<Flammability>4</Flammability>
+			<DeteriorationRate>0.5</DeteriorationRate>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<tradeability>Buyable</tradeability>
+		<thingCategories Inherit="False">
+			<li>RimWriter_BookMaterials</li>
+		</thingCategories>
+		<filthLeaving>Filth_Trash</filthLeaving>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+			<li>Woody</li>
+			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawWood</li>
+		</stuffCategories>
+	</ThingDef>
+</Defs>

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
   <RulePackDef>
     <defName>RimWriterNameUtility</defName>
+	<include>
+		<li>ArtNameUtility</li>
+	</include>
     <rulePack>
       <rulesFiles>
         <li>BookTitle->Words/Nouns/Books</li>
@@ -31,6 +35,7 @@
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterNamerBook</defName>
     <include>
@@ -39,29 +44,30 @@
     <rulePack>
       <rulesStrings>
         <!-- General -->
-        <li>r_art_name(p=4)->[ConceptAny]</li>
-        <li>r_art_name(p=4)->[BookTitle] [Trans] [ConceptAny]</li>
-        <li>r_art_name(p=4)->[BookTitle] [Trans] [ConceptAny]</li>
-        <li>r_art_name(p=4)->[maybe_a] [maybe_adjective] [BookTitle]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [ConceptAny]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [TerrainFeature]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Vegetable]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Game]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Animal]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Gore]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [NaturalObject]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [PersonFamily]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Enemy]</li>
+        <li>title->[ConceptAny]</li>
+        <li>title(p=4)->[BookTitle] [Trans] [ConceptAny]</li>
+        <li>title(p=4)->[BookTitle] [Trans] [ConceptAny]</li>
+        <li>title(p=4)->[maybe_a] [maybe_adjective] [BookTitle]</li>
+        <li>title->[maybe_a] [maybe_adjective] [ConceptAny]</li>
+        <li>title->[maybe_a] [maybe_adjective] [TerrainFeature]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Vegetable]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Game]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Animal]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Gore]</li>
+        <li>title->[maybe_a] [maybe_adjective] [NaturalObject]</li>
+        <li>title->[maybe_a] [maybe_adjective] [PersonFamily]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Enemy]</li>
         <!-- Person. High probability; if we can use these we want to -->
-        <li>r_art_name(p=6)->[ANYPAWN_nameIndef]'s [BookTitle]</li>
-        <li>r_art_name(p=3)->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]</li>
-        <li>r_art_name(p=3)->[ANYPAWN_nameIndef]'s [PersonalCharacteristic]</li>
-        <li>r_art_name(p=3)->[PersonalCharacteristic] of [ANYPAWN_nameIndef]</li>
-        <li>r_art_name(p=3)->[ConceptAny] [Trans] [ANYPAWN_nameIndef]</li>
-        <li>r_art_name(p=3)->[maybe_a] [BookTitle] [Trans] [ANYPAWN_nameIndef]</li>
+        <li>title(p=6)->[ANYPAWN_nameIndef]'s [BookTitle]</li>
+        <li>title(p=3)->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]</li>
+        <li>title(p=3)->[ANYPAWN_nameIndef]'s [PersonalCharacteristic]</li>
+        <li>title(p=3)->[PersonalCharacteristic] of [ANYPAWN_nameIndef]</li>
+        <li>title(p=3)->[ConceptAny] [Trans] [ANYPAWN_nameIndef]</li>
+        <li>title(p=3)->[maybe_a] [BookTitle] [Trans] [ANYPAWN_nameIndef]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterNamerScroll</defName>
     <include>
@@ -70,29 +76,30 @@
     <rulePack>
       <rulesStrings>
         <!-- General -->
-        <li>r_art_name(p=4)->[ConceptAny]</li>
-        <li>r_art_name(p=4)->[ScrollTitle] [Trans] [ConceptAny]</li>
-        <li>r_art_name(p=4)->[ScrollTitle] [Trans] [ConceptAny]</li>
-        <li>r_art_name(p=4)->[maybe_a] [maybe_adjective] [ScrollTitle]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [ConceptAny]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [TerrainFeature]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Vegetable]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Game]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Animal]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Gore]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [NaturalObject]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [PersonFamily]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Enemy]</li>
+        <li>title->[ConceptAny]</li>
+        <li>title(p=4)->[ScrollTitle] [Trans] [ConceptAny]</li>
+        <li>title(p=4)->[ScrollTitle] [Trans] [ConceptAny]</li>
+        <li>title(p=4)->[maybe_a] [maybe_adjective] [ScrollTitle]</li>
+        <li>title->[maybe_a] [maybe_adjective] [ConceptAny]</li>
+        <li>title->[maybe_a] [maybe_adjective] [TerrainFeature]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Vegetable]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Game]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Animal]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Gore]</li>
+        <li>title->[maybe_a] [maybe_adjective] [NaturalObject]</li>
+        <li>title->[maybe_a] [maybe_adjective] [PersonFamily]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Enemy]</li>
         <!-- Person. High probability; if we can use these we want to -->
-        <li>r_art_name(p=6)->[ANYPAWN_nameIndef]'s [ScrollTitle]</li>
-        <li>r_art_name(p=3)->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]</li>
-        <li>r_art_name(p=3)->[ANYPAWN_nameIndef]'s [PersonalCharacteristic]</li>
-        <li>r_art_name(p=3)->[PersonalCharacteristic] of [ANYPAWN_nameIndef]</li>
-        <li>r_art_name(p=3)->[ConceptAny] [Trans] [ANYPAWN_nameIndef]</li>
-        <li>r_art_name(p=3)->[maybe_a] [ScrollTitle] [Trans] [ANYPAWN_nameIndef]</li>
+        <li>title(p=6)->[ANYPAWN_nameIndef]'s [ScrollTitle]</li>
+        <li>title(p=3)->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]</li>
+        <li>title(p=3)->[ANYPAWN_nameIndef]'s [PersonalCharacteristic]</li>
+        <li>title(p=3)->[PersonalCharacteristic] of [ANYPAWN_nameIndef]</li>
+        <li>title(p=3)->[ConceptAny] [Trans] [ANYPAWN_nameIndef]</li>
+        <li>title(p=3)->[maybe_a] [ScrollTitle] [Trans] [ANYPAWN_nameIndef]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterNamerTablet</defName>
     <include>
@@ -101,29 +108,30 @@
     <rulePack>
       <rulesStrings>
         <!-- General -->
-        <li>r_art_name(p=4)->[ConceptAny]</li>
-        <li>r_art_name(p=4)->[TabletTitle] [Trans] [ConceptAny]</li>
-        <li>r_art_name(p=4)->[TabletTitle] [Trans] [ConceptAny]</li>
-        <li>r_art_name(p=4)->[maybe_a] [maybe_adjective] [TabletTitle]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [ConceptAny]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [TerrainFeature]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Vegetable]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Game]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Animal]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Gore]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [NaturalObject]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [PersonFamily]</li>
-        <li>r_art_name->[maybe_a] [maybe_adjective] [Enemy]</li>
+        <li>title(p=0.25)->[ConceptAny]</li>
+        <li>title(p=1.5)->[TabletTitle] [Trans] [ConceptAny]</li>
+        <li>title(p=1.5)->[TabletTitle] [Trans] [ConceptAny]</li>
+        <li>title(p=1.5)->[maybe_a] [maybe_adjective] [TabletTitle]</li>
+        <li>title->[maybe_a] [maybe_adjective] [ConceptAny]</li>
+        <li>title->[maybe_a] [maybe_adjective] [TerrainFeature]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Vegetable]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Game]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Animal]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Gore]</li>
+        <li>title->[maybe_a] [maybe_adjective] [NaturalObject]</li>
+        <li>title->[maybe_a] [maybe_adjective] [PersonFamily]</li>
+        <li>title->[maybe_a] [maybe_adjective] [Enemy]</li>
         <!-- Person. High probability; if we can use these we want to -->
-        <li>r_art_name(p=6)->[ANYPAWN_nameIndef]'s [TabletTitle]</li>
-        <li>r_art_name(p=3)->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]</li>
-        <li>r_art_name(p=3)->[ANYPAWN_nameIndef]'s [PersonalCharacteristic]</li>
-        <li>r_art_name(p=3)->[PersonalCharacteristic] of [ANYPAWN_nameIndef]</li>
-        <li>r_art_name(p=3)->[ConceptAny] [Trans] [ANYPAWN_nameIndef]</li>
-        <li>r_art_name(p=3)->[maybe_a] [TabletTitle] [Trans] [ANYPAWN_nameIndef]</li>
+        <li>title(p=6)->[ANYPAWN_nameIndef]'s [TabletTitle]</li>
+        <li>title(p=3)->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]</li>
+        <li>title(p=3)->[ANYPAWN_nameIndef]'s [PersonalCharacteristic]</li>
+        <li>title(p=3)->[PersonalCharacteristic] of [ANYPAWN_nameIndef]</li>
+        <li>title(p=3)->[ConceptAny] [Trans] [ANYPAWN_nameIndef]</li>
+        <li>title(p=3)->[maybe_a] [TabletTitle] [Trans] [ANYPAWN_nameIndef]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterNamerJournal</defName>
     <include>
@@ -132,22 +140,23 @@
     <rulePack>
       <rulesStrings>
         <!-- General -->
-        <li>r_art_name(p=4)->[JournalTitle] [Trans] [ConceptAny]</li>
-        <li>r_art_name(p=4)->[maybe_a] [maybe_adjective] [JournalTitle]</li>
+        <li>title->[JournalTitle] [Trans] [ConceptAny]</li>
+        <li>title->[maybe_adjective] [JournalTitle]</li>
         <!-- Numeric -->
-        <li>r_art_name(p=2)->[JournalTitle] [Trans] [ConceptAny] [journal_volume]</li>
-        <li>r_art_name->[book_name_numeric] [Trans] [ANYPAWN_nameIndef]</li>
+        <li>title->[JournalTitle] [Trans] [ConceptAny] [journal_volume]</li>
+        <li>title(p=2)->[book_name_numeric] [Trans] [ANYPAWN_nameIndef]</li>
         <!-- Person. High probability; if we can use these we want to -->
-        <li>r_art_name(p=6)->[ANYPAWN_nameIndef]'s [JournalTitle]</li>
-        <li>r_art_name(p=3)->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]</li>
-        <li>r_art_name(p=3)->[ANYPAWN_nameIndef]'s [PersonalCharacteristic] [JournalTitle]</li>
-        <li>r_art_name(p=3)->[ConceptAny] [Trans] [ANYPAWN_nameIndef]</li>
-        <li>r_art_name(p=3)->[maybe_a] [JournalTitle] [Trans] [ANYPAWN_nameIndef]</li>
+        <li>title(p=6)->[ANYPAWN_nameIndef]'s [JournalTitle]</li>
+        <li>title(p=3)->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]</li>
+        <li>title(p=3)->[ANYPAWN_nameIndef]'s [PersonalCharacteristic] [JournalTitle]</li>
+        <li>title(p=3)->[ConceptAny] [Trans] [ANYPAWN_nameIndef]</li>
+        <li>title(p=3)->[maybe_a] [JournalTitle] [Trans] [ANYPAWN_nameIndef]</li>
         <li>journal_volume->Vol. [book_name_numeric]</li>
         <li>journal_volume->[book_name_numeric] Edition</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterNamerWrittenBase</defName>
     <rulePack>
@@ -178,6 +187,7 @@
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterArtDescription_Book</defName>
     <include>
@@ -187,43 +197,46 @@
     </include>
     <rulePack>
       <rulesStrings>
-        <li>physical_description_root(p=500)->This [BookTitle] [tells] [image]. [desc_sentence_group]</li>
-        <li>physical_description_root(p=500)->This [BookTitle] [holds] a [text] of [image]. [desc_sentence_group]</li>
-        <li>physical_description_root(p=500)->In this [BookTitle] is a [text] of [image]. [desc_sentence_group].</li>
+        <li>desc(p=500)->This [BookTitle] [tells] [image]. [desc_sentence_group]. [artextra_clause]. [style_clause].</li>
+        <li>desc(p=500)->This [BookTitle] [holds] a [text] of [image]. [desc_sentence_group]. [artextra_clause]. [style_clause].</li>
+        <li>desc(p=500)->In this [BookTitle] is a [text] of [image]. [desc_sentence_group]. [artextra_clause]. [style_clause].</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterArtDescription_Journal</defName>
     <include>
       <li>RimWriterNamerWrittenBase</li>
       <li>RimWriterNameUtility</li>
       <li>RimWriterArtDescriptionUtility_Journal</li>
+	  <li>ArtNameUtility</li>
     </include>
     <rulePack>
       <rulesStrings>
-        <li>physical_description_root(p=500)->This [JournalTitle] [tells] [image]. [desc_sentence_group]</li>
-        <li>physical_description_root(p=500)->This [JournalTitle] [holds] a [text] of [image]. [desc_sentence_group]</li>
-        <li>physical_description_root(p=500)->This [JournalTitle] is a [text] of [image]. [desc_sentence_group]</li>
+        <li>desc(p=500)->This [JournalTitle] [tells] [image]. [desc_sentence_group]. [artextra_clause].</li>
+        <li>desc(p=500)->This [JournalTitle] [holds] a [text] of [image]. [desc_sentence_group]. [artextra_clause].</li>
+        <li>desc(p=500)->This [JournalTitle] is a [text] of [image]. [desc_sentence_group]. [artextra_clause].</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterArtDescription_Guide</defName>
     <include>
       <li>RimWriterNamerWrittenBase</li>
       <li>RimWriterNameUtility</li>
+	  <li>ArtNameUtility</li>
     </include>
     <rulePack>
       <rulesStrings>
-        <li>physical_description_root(p=500)->This skillbook [lays_out] some [simple] rules. [rules_sentence_group].</li>
+        <li>desc(p=500)->This guide book [lays_out] some [simple] rules. [rules_sentence_group].</li>
         <li>rules_sentence_group->[rule_one]. [exp] [rule_two]. [exp] [rule_three]</li>
         <li>rule_one->The first lesson [teaches_to] [rule]</li>
         <li>rule_two->The next lesson [teaches_to] [rule]</li>
         <li>rule_two->In the following chapter, it [teaches_to] [rule]</li>
         <li>rule_two->After that, it [teaches_to] [rule]</li>
         <li>rule_three->And the most important lesson [teaches_to] [rule]</li>
-        <li>exp(p=3)->.</li>
         <li>exp->The logic is [hard_to_understand].</li>
         <li>exp->The reasoning is [hard_to_understand].</li>
         <li>exp->The lesson is [hard_to_understand].</li>
@@ -264,7 +277,6 @@
         <li>rule->always have a [Vegetable] nearby[situation]</li>
         <li>rule->understand that [NaturalObject]s are always [AdjectiveAny]</li>
         <li>rule->breathe deeply[situation]</li>
-        <li>situation(p=2)-></li>
         <li>situation-> when [surrounded_by] [enimal_adj] [enimal]s</li>
         <li>situation-> when encountering [ConceptAngsty]</li>
         <li>situation-> when between a [Character] and a [Vegetable]</li>
@@ -281,10 +293,12 @@
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterArtDescriptionUtility_Global</defName>
     <include>
       <li>RimWriterNamerWrittenBase</li>
+	  <li>ArtNameUtility</li>
     </include>
     <rulePack>
       <rulesStrings>
@@ -423,10 +437,12 @@
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+  
   <RulePackDef>
     <defName>RimWriterArtDescriptionUtility_Journal</defName>
     <include>
       <li>RimWriterNamerWrittenBase</li>
+	  <li>ArtNameUtility</li>
     </include>
     <rulePack>
       <rulesStrings>

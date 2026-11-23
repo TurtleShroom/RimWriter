@@ -1,101 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ModMetaData>
-  <name>RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)</name>
-  <packageId>Mlie.RimWriter</packageId>
-  <author>Jecrell</author>
-  <url>https://github.com/emipa606/RimWriter</url>
-  <supportedVersions>
-    <li>1.0</li>
-    <li>1.1</li>
-    <li>1.2</li>
-    <li>1.3</li>
-    <li>1.4</li>
-    <li>1.5</li>
-    <li>1.6</li>
-    <li>1.7</li>
-  </supportedVersions>
-  <modDependencies>
-    <li>
-      <packageId>brrainz.harmony</packageId>
-      <displayName>Harmony</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-    </li>
-  </modDependencies>
-  <loadAfter>
-    <li>brrainz.harmony</li>
-  </loadAfter>
-  <description>[img]https://img.litet.net/logos/Info.png[/img]
-Update of Jecrells mod
-https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 
-- This is an unofficial port
-- This will be removed when/if Jecrell comes back
-- Added chinese translation based on the mod by leafzxg
-- Also checkout the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2859447345]RimWriter Addon[/url] by greensniperhat
-
-[img]https://img.litet.net/logos/Notice.png[/img]
-
-[table]
-	[tr]
-		[td][url=https://discord.gg/h5TY6DA][img]https://img.litet.net/logos/Discord.png[/img][/url][/td]
-		[td][url=https://github.com/emipa606/RimWriter][img]https://img.litet.net/logos/Github.png[/img][/url][/td]
-    [/tr]
-    [tr]
-        [td][img]https://img.litet.net/logos/SafeToAdd.png[/img][/td]
-        [td][img]https://img.litet.net/logos/RemoveMayWork.png[/img][/td]
-    [/tr]
-[/table]
+	<ModMetaData>
+	<name>TurtleShroom Productions Proudly Presents: Rim Writer (Continued)</name>
+	<packageId>Mlie.RimWriter</packageId>
+	<author>Jecrell, TurtleShroom</author>
+	<url>https://github.com/emipa606/RimWriter</url>
+	<supportedVersions>
+	<li>1.6</li>
+	<li>1.7</li>
+	</supportedVersions>
+	<modDependencies>
+	<li>
+	<packageId>vanillaexpanded.vbookse</packageId>
+	<displayName>Vanilla Factions Expanded Books Mod</displayName>
+	<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+	<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+	</li>
+	</modDependencies>
+	<loadAfter>
+	<li>brrainz.harmony</li>
+	<li>oskarpotocki.vanillafactionsexpanded.core</li>
+	<li>vanillaexpanded.vbookse</li>
+	<li>swiftspectral.booksplus</li>
+	<li>klvlt.writefiction</li>
+	<li>bblkepling.childrensbooks</li>
+	<li>malikchildish.thisischildish</li>
+	<li>mlie.vanillabooksexpandedexpanded</li>
+	<li>ruyu.tynanbook</li>
+	<li>dankpyon.medieval.overhaul</li>
+	<li>vr.mopatches</li>
+	<li>tsp.dankpyon.mo.texturereversion</li>
+	</loadAfter>
+	<description>[H2]TURTLESHROOM PRODUCTIONS PROUDLY PRESENTS: RIM WRITER (CONTINUED)[/H2]
 	
-[img]https://img.litet.net/logos/OriginalDescription.png[/img]
+	When Ludeon added Vanilla rendition support for books in the game, I immediately thought of this Mod. Years ago, I resolved to continue the Mod. Now, all this time later, here I am.
+	
+	[b][u]Changes Made:[/u][/b]
+		* Incorporated the Vanilla rendition's book system!
+		* Removed duplicate bookcases. Vanilla rendition bookcases now hold this Mod's books!
+		* Removed duplicate writing stations. That job has been outsourced to the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2193152410]Vanilla Factions Expanded Books Mod[/url]! Unfortunately, that also means you will need that Mod to play this one.
+		* Added support for the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3282494971]Write Fictional Books Mod[/url]! You can now make Vanilla rendition books using the Rim Writer Mod materals!
+		* Added Rim Writer Mod support for the [url=https://www.steamcommunity.com/sharedfiles/filedetails/?id=3219596926]Medieval Overhaul Mod[/url]! With this Mod, the Paper Mixture and paper making system accepts Rim Writer Mod goods AND, because of its extra steps, is more efficient than making pages by hand! In addition, the MO paper serves for the purposes of making Rim Writer books! Said Mod's paper making has been balanced around the Rim Writer Mod, as have the pages needed to create it.
+		* Added support for the [url=https://www.steamcommunity.com/sharedfiles/filedetails/?id=3369457251]Children's Books Mod[/url]! You can now make Coloring Books and Children's Books using Rim Writer Mod materials!
+		* Added support for the [url=https://www.steamcommunity.com/sharedfiles/filedetails/?id=3636139740]"This Is Childish" Book Mod[/url]! You can now make the titular book using the Rim Writer Mod materals!
+		* You can now use ANY LEATHER, ANY WOOD, and ANY TEXTILE to make pages, meaning you don't have to waste your cloth if you have Patch Leather lying around! No longer do you have to wait to get started writing!
+		* Many more Mods have been incorporated!
+		
+		
+	[b][u]Why This Mod?[/u][/b]
+	
+	One may ask why this Mod would be worth it if books already exist. Isn't the Rim Writer Mod just a duplicate?
+	
+	The answer is no, it is not, not anymore!
+	
+	This Mod adds its own series of books separate from the Vanilla rendition. Rim Writer Books have their own Sprites, their own names and descriptions, and their own "Mad Libs" amusement that generates each time. In addition to diversifying the amount of books available in the game, it also adds Scrolls and Tablets, which are books that a low-tech Pawns can make and enjoy. Pawns will also consider them separately: a Pawn bored of reading a Vanilla rendition book will still pick up a Rim Writer Mod book!
+	
+	This Mod also makes producing books more flavorful and compatible with Mods: you have to make the pages for the book, which is done so in bulk. This solves a major problem in every book Mod that this Mod touches! You can now use ANY LEATHER, ANY WOOD, and ANY TEXTILE to make pages, meaning you don't have to waste your cloth if you have Patch Leather lying around!
+	
+	
+	
 
-Add tablets, books, scrolls, libraries, and more to your RimWorld playthroughs.
+	----------
 
-RimWriter is a mod that adds a lot of content focused on writing to supplement the standard vanilla RimWorld playthrough such as:
+	Update of Jecrells mod
+	https://steamcommunity.com/sharedfiles/filedetails/?id=1521844535
 
-[h1]-Items[/h1]
-  * Stone Tablets
-  * Leather Scrolls
-  * Journals
-  * Handwritten Books
-  * Typed Books and Journals
-  * Skillbooks for improving skills
+	- This is an unofficial port
+	- This will be removed when/if Jecrell comes back
+	- Added chinese translation based on the mod by leafzxg
 
-[h1]-Furniture[/h1]
-  * Stone shelves for tablets
-  * Scrollcases, tall and short
-  * Bookcases, tall and short
-  * Writer's tables
-  * A typewriter
+	Add tablets, books, scrolls, libraries, and more to your RimWorld playthroughs.
 
-[h1]-Features[/h1]
-  * Customized text generation for tablets, books, and journals.
-  * Compatiblity with Lord of the Rims and Call of Cthulhu mods.
-    - In Call of Cthulhu, writing reduces sanity loss over time.
-    - Future compatability with storing Grimoires and Wizard textbooks inside bookcases/scrollcases.
+	RimWriter is a mod that adds a lot of content focused on writing to supplement the standard vanilla RimWorld play through such as:
 
-[h1]QandA:[/h1]
-[b]Why create this mod?[/b]
-I wanted to make a framework sort of mod that I could add to or use later in my current and future projects. I feel that tablets, scrolls, and books all have a clear place in RimWorld and future mods.
+	[h1]-Items[/h1]
+	* Stone Tablets
+	* Leather Scrolls
+	* Journals
+	* Handwritten Books
+	* Typed Books and Journals
+	* Skillbooks for improving skills
 
-[b]Is this mod old save compatible?[/b]
-Yes.
+	[h1]-Furniture[/h1]
+	* Stone shelves for tablets
+	* Scrollcases, tall and short
+	* Bookcases, tall and short
+	* Writer's tables
+	* A typewriter
 
-[b]Does this mod conflict with other joy mods?[/b]
-No.
+	[h1]-Features[/h1]
+	* Customized text generation for tablets, books, and journals.
+	* Compatiblity with Lord of the Rims and Call of Cthulhu mods.
+	- In Call of Cthulhu, writing reduces sanity loss over time.
+	- Future compatability with storing Grimoires and Wizard textbooks inside bookcases/scrollcases.
+
+	[h1]QandA:[/h1]
+	[b]Why create this mod?[/b]
+	I wanted to make a framework sort of mod that I could add to or use later in my current and future projects. I feel that tablets, scrolls, and books all have a clear place in RimWorld and future mods.
+
+	[b]Is this mod old save compatible?[/b]
+	Yes.
+
+	[b]Does this mod conflict with other joy mods?[/b]
+	No.
 
 
-[img]https://img.litet.net/logos/ReportingIssues.png[/img]
-[list]
-[*] See if the the error persists if you just have this mod and its requirements active.
-[*] If not, try adding your other mods until it happens again.
-[*] Always post your log using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Log Uploader[/url]
-[*] For best support, please use the Discord-channel for error-reporting.
-[*] Do not report errors by making a discussion-thread, I get no notification of that.
-[*] If you have the solution for a problem, please post it to the GitHub repository.
-[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
-[/list] 
-
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2251045831][img]https://img.shields.io/github/v/release/emipa606/RimWriter?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | books, research</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.7.0</modVersion>
+	[list]
+	[*] See if the the error persists if you just have this mod and its requirements active.
+	[*] If not, try adding your other mods until it happens again.
+	[*] Always post your log using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Log Uploader[/url]
+	[*] For best support, please use the Discord-channel for error-reporting.
+	[*] Do not report errors by making a discussion-thread, I get no notification of that.
+	[*] If you have the solution for a problem, please post it to the GitHub repository.
+	[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
+	[/list]</description>
 </ModMetaData>

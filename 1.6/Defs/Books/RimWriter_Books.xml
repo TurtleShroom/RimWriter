@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingDef ParentName="Jecrell_Book">
+		<defName>Jecrell_Book</defName>
+		<label>book</label>
+		<description>A collection of pages.</description>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+		  <texPath>Item/Resource/Journal/Jecrell_Book</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <onGroundRandomRotateAngle>15</onGroundRandomRotateAngle>
+		  <!-- <drawSize>0.5</drawSize> -->
+		</graphicData>
+		<uiIconPath>Item/Resource/Journal/Jecrell_Book</uiIconPath>
+		<comps Inherit="False">
+		  <li Class="CompProperties_Forbiddable"></li>
+		  <li>
+			<compClass>CompQuality</compClass>
+		  </li>
+		  <li Class="CompProperties_Book">
+			<nameMaker>RimWriterNamerBook</nameMaker>
+			<descriptionMaker>RimWriterArtDescription_Book</descriptionMaker>
+			<ageYearsRange>0~200</ageYearsRange>
+			<openGraphic>
+			  <texPath>Item/Resource/Journal/Jecrell_Book</texPath>
+			  <graphicClass>Graphic_Single</graphicClass>
+			  <drawSize>0.7</drawSize>
+			</openGraphic>
+			<verticalGraphic>
+			  <texPath>Things/Item/Book/Novel/Novel_Vertical</texPath>
+			  <graphicClass>Graphic_Multi</graphicClass>
+			  <addTopAltitudeBias>true</addTopAltitudeBias>
+			</verticalGraphic>
+			<doers>
+			  <li Class="BookOutcomeProperties_JoyFactorModifier"></li>
+			  <!--
+			  <li Class="BookOutcomeProperties_GiveQuest">
+				<questChance>0.05</questChance>
+			  </li>
+			  -->
+			</doers>
+		  </li>
+		  <!--
+		  <li Class="CompProperties_Art">
+			<nameMaker>RimWriterNamerBook</nameMaker>
+			<descriptionMaker>RimWriterArtDescription_Book</descriptionMaker>
+		  </li>
+		  -->
+		</comps>
+		<tradeTags>
+			<li>Book</li>
+			<li>Books</li>
+			<li>DankPyon_Tale</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="Jecrell_Book">
+		<defName>Jecrell_Guidebook</defName>
+		<label>guide book</label>
+		<thingClass>Book</thingClass>
+		<description>An advanced skill book used to help characters with their professions and skill improvement.</description>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+		  <texPath>Item/Resource/Journal/Jecrell_Book</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		  <!-- <drawSize>0.5</drawSize> -->
+		</graphicData>
+		<statBases>
+		  <MarketValue>400</MarketValue>
+		  <SellPriceFactor>0.05</SellPriceFactor>
+		</statBases>
+		<comps Inherit="False">
+		  <li Class="CompProperties_Forbiddable"></li>
+		  <li>
+			<compClass>CompQuality</compClass>
+		  </li>
+		  <!--
+		  <li Class="CompProperties_Art">
+			<nameMaker>RimWriterNamerJournal</nameMaker>
+			<descriptionMaker>RimWriterArtDescription_Guide</descriptionMaker>
+		  </li>
+		  -->
+			<li Class="CompProperties_Book">
+				<nameMaker>RimWriterNamerJournal</nameMaker>
+				<descriptionMaker>RimWriterArtDescription_Guide</descriptionMaker>
+				<ageYearsRange>0~200</ageYearsRange>
+				<openGraphic>
+					<texPath>Item/Resource/Journal/Jecrell_JournalBook</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<!-- <drawSize>0.7</drawSize> -->
+				</openGraphic>
+				<verticalGraphic>
+					<texPath>Things/Item/Book/Novel/Novel_Vertical</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<addTopAltitudeBias>true</addTopAltitudeBias>
+				</verticalGraphic>
+				<doers>
+					<li Class="BookOutcomeProperties_GainSkillExp"></li>
+					<li Class="BookOutcomeProperties_GiveQuest">
+						<questChance>0.06</questChance>
+					</li>
+				</doers>
+			</li>
+		</comps>
+		<tradeTags>
+		  <li>ExoticMisc</li>
+		  <li>Books</li>
+		  <li>Book</li>
+		  <li>DankPyon_Treatise</li>
+		</tradeTags>
+	</ThingDef>
+</Defs>

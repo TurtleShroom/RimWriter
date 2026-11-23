@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
+	<!--
   <JobDef>
     <defName>RimWriter_ReadABook</defName>
     <driverClass>RimWriter.JobDriver_ReadABook</driverClass>
@@ -11,14 +13,17 @@
     <joyXpPerTick>0.002</joyXpPerTick>
     <joyKind>Jecrell_Writing</joyKind>
   </JobDef>
+
   <JobDef>
     <defName>RimWriter_ReturnBook</defName>
     <driverClass>RimWriter.JobDriver_ReturnBook</driverClass>
     <reportString>returning TargetA.</reportString>
   </JobDef>
+	-->
+
   <JobDef>
     <defName>RimWriter_FreeWrite</defName>
-    <driverClass>RimWriter.JobDriver_FreeWrite</driverClass>
+    <driverClass>JobDriver_SitFacingBuilding</driverClass>
     <reportString>practice writing.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
@@ -27,6 +32,7 @@
     <joyXpPerTick>0.002</joyXpPerTick>
     <joyKind>Jecrell_Writing</joyKind>
   </JobDef>
+  
   <JobDef>
     <defName>RimWriter_AutoWrite</defName>
     <driverClass>JobDriver_SitFacingBuilding</driverClass>

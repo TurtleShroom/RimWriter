@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="DankPyon_Paper"]/thingCategories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Paper"]</xpath>
+			<success>Always</success>
+			<value>
+				<thingCategories></thingCategories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li/filter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter/categories</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<categories></categories>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li/filter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter/thingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<thingDefs></thingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li/filter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li/filter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter</xpath>
+			<success>Always</success>
+			<value>
+				<disallowedThingDefs></disallowedThingDefs>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites></researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/recipeUsers</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]</xpath>
+			<success>Always</success>
+			<value>
+				<recipeUsers></recipeUsers>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Paper"]/thingCategories</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Paper"]/thingCategories</xpath>
+			<success>Always</success>
+			<value>
+				<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Paper"]/stackLimit</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Paper"]/stackLimit</xpath>
+			<success>Always</success>
+			<value>
+				<stackLimit>10000</stackLimit>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Paper"]</xpath>
+			<success>Always</success>
+			<value>
+				<stackLimit>10000</stackLimit>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Paper"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[@Name="DankPyon_RecipeTreatiseBase"]/recipeUsers</xpath>
+					<success>Always</success>
+					<value>
+						<li>VBE_WritersTable</li>
+						<li>VBE_TypewritersTable</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[@Name="DankPyon_RecipeTreatiseBase"]/ingredients</xpath>
+					<success>Always</success>
+					<value>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<customSummary>writing materials</customSummary>
+									<categories>
+										<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+									</categories>
+									<thingDefs>
+										<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+									</thingDefs>
+								</filter>
+								<count>205</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[@Name="DankPyon_RecipeTreatiseBase"]/fixedIngredientFilter</xpath>
+					<success>Always</success>
+					<value>
+						<fixedIngredientFilter Inherit="False">
+							<categories>
+								<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+							</categories>
+							<thingDefs>
+								<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li/filter/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter/categories</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li/filter/disallowedThingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li/filter/thingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="tsp.bathroomhumor">DungLog</li>
+						<li MayRequire="sihv.rombones">BoneItem</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter/thingDefs</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="tsp.bathroomhumor">DungLog</li>
+						<li MayRequire="sihv.rombones">BoneItem</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DankPyon_Paper"]/statBases/MarketValue</xpath>
+					<success>Always</success>
+					<value>
+						<MarketValue>0.01</MarketValue>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients/li[1]/count</xpath>
+					<success>Always</success>
+					<value>
+						<count>75</count>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/ingredients</xpath>
+					<success>Always</success>
+					<value>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<customSummary>writing materials</customSummary>
+									<categories>
+										<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+										<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawWood</li>
+										<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Wood</li>
+									</categories>
+									<thingDefs>
+										<li>WoodLog</li>
+										<li MayRequire="mlie.rimwriter">Jecrell_Parchment</li>
+										<li MayRequire="mlie.rimwriter">Jecrell_Paper</li>
+										<li MayRequire="mlie.rimwriter">Jecrell_ClothPaper</li>
+										<li MayRequire="tsp.bathroomhumor">DungLog</li>
+										<li MayRequire="sihv.rombones">BoneItem</li>
+									</thingDefs>
+									<disallowedThingDefs>
+										<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+									</disallowedThingDefs>
+								</filter>
+								<count>75</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/fixedIngredientFilter</xpath>
+					<success>Always</success>
+					<value>
+						<fixedIngredientFilter Inherit="False">
+							<categories Inherit="False">
+								<!-- <li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li> -->
+								<li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawWood</li>
+								<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Wood</li>
+							</categories>
+							<thingDefs>
+								<li>WoodLog</li>
+								<li MayRequire="mlie.rimwriter">Jecrell_Parchment</li>
+								<li MayRequire="mlie.rimwriter">Jecrell_Paper</li>
+								<li MayRequire="mlie.rimwriter">Jecrell_ClothPaper</li>
+								<li MayRequire="tsp.bathroomhumor">DungLog</li>
+								<li MayRequire="sihv.rombones">BoneItem</li>
+							</thingDefs>
+							<disallowedThingDefs>
+								<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+							</disallowedThingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/researchPrerequisite</xpath>
+					<success>Always</success>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/researchPrerequisites</xpath>
+					<success>Always</success>
+					<value>
+						<researchPrerequisites Inherit="False">
+							<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Presser</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/recipeUsers</xpath>
+					<success>Always</success>
+					<value>
+						<recipeUsers Inherit="False">
+							<li MayRequire="mlie.rimwriter">RimWriter_PapermakingBench</li>
+							<li MayRequire="mlie.rimwriter">RimWriter_PapermakingBenchElectric</li>
+							<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Book_ScribeTable</li>
+							<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Workbench</li>
+						</recipeUsers>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Paper"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ProcessorFramework.ProcessDef[@Name="DankPyon_Press_PaperBase"]/efficiency</xpath>
+					<success>Always</success>
+					<value>
+						<efficiency>100</efficiency> <!-- Vastly more efficient than doing it at this Mod's printer -->
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Paper"]/storedConceptLearnOpportunity</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Paper"]/storedConceptLearnOpportunity</xpath>
+			<success>Always</success>
+			<value>
+				<storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Paper"]</xpath>
+			<success>Always</success>
+			<value>
+				<storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Mixture_Paper"]/storedConceptLearnOpportunity</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Mixture_Paper"]/storedConceptLearnOpportunity</xpath>
+			<success>Always</success>
+			<value>
+				<storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Mixture_Paper"]</xpath>
+			<success>Always</success>
+			<value>
+				<storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/conceptLearned</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]/conceptLearned</xpath>
+			<success>Always</success>
+			<value>
+				<conceptLearned>RimWriter_PaperMaking</conceptLearned>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="DankPyon_Make_PaperMixture"]</xpath>
+			<success>Always</success>
+			<value>
+				<conceptLearned>RimWriter_PaperMaking</conceptLearned>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Press_Paper"]/storedConceptLearnOpportunity</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Press_Paper"]/storedConceptLearnOpportunity</xpath>
+			<success>Always</success>
+			<value>
+				<storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Press_Paper"]</xpath>
+			<success>Always</success>
+			<value>
+				<storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Book_ScribeTable"]/storedConceptLearnOpportunity</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Book_ScribeTable"]/storedConceptLearnOpportunity</xpath>
+			<success>Always</success>
+			<value>
+				<storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="DankPyon_Book_ScribeTable"]</xpath>
+			<success>Always</success>
+			<value>
+				<storedConceptLearnOpportunity>RimWriter_PaperMaking</storedConceptLearnOpportunity>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="DankPyon_Book_ScribeTable"]/stuffCategories</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="DankPyon_Book_ScribeTable"]/stuffCategories</xpath>
+			<success>Always</success>
+			<value>
+				<stuffCategories>
+					<li>Stony</li>
+					<li>Metallic</li>
+					<li>Woody</li>
+
+					<!-- Mod support -->
+					<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+					<li MayRequire="Dubwise.Rimefeller">Composite</li>
+					<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+					<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+					<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+					<li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+					<li MayRequire="sarg.rimbees">RB_Waxy</li>
+					<li MayRequire="eltwofour.mantodeanrace">L24_Stuff_MantodeanOrganic</li>
+					<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+					<li MayRequire="gguake.race.vivi">VV_Wax</li>
+				</stuffCategories>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

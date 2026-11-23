@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="BBLK_WriteColoringBook"]/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="BBLK_WriteColoringBook"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites></researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/RecipeDef[defName="MalikChildish_MakeThisIsChildish"]/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="MalikChildish_MakeThisIsChildish"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites></researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="BBLK_ColoringBook"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="BBLK_WriteColoringBook"]/ingredients</xpath>
+					<success>Always</success>
+					<value>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<customSummary>writing materials</customSummary>
+									<categories>
+										<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+									</categories>
+									<thingDefs>
+										<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+									</thingDefs>
+								</filter>
+								<count>65</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="BBLK_WriteColoringBook"]/fixedIngredientFilter</xpath>
+					<success>Always</success>
+					<value>
+						<fixedIngredientFilter Inherit="False">
+							<categories>
+								<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+							</categories>
+							<thingDefs>
+								<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="BBLK_WriteColoringBook"]/recipeUsers</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Book_ScribeTable</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="BBLK_WriteColoringBook"]/researchPrerequisites</xpath>
+					<success>Always</success>
+					<value>
+						<researchPrerequisites Inherit="False">
+							<li>VBE_Writing</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="BBLK_ChildrensBook"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="BBLK_WriteChildrensBook"]/ingredients</xpath>
+					<success>Always</success>
+					<value>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<customSummary>writing materials</customSummary>
+									<categories>
+										<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+									</categories>
+									<thingDefs>
+										<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+									</thingDefs>
+								</filter>
+								<count>65</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="BBLK_WriteChildrensBook"]/fixedIngredientFilter</xpath>
+					<success>Always</success>
+					<value>
+						<fixedIngredientFilter Inherit="False">
+							<categories>
+								<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+							</categories>
+							<thingDefs>
+								<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="BBLK_WriteChildrensBook"]/recipeUsers</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Book_ScribeTable</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="BBLK_WriteChildrensBook"]/researchPrerequisites</xpath>
+					<success>Always</success>
+					<value>
+						<researchPrerequisites Inherit="False">
+							<li>VBE_Writing</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="MalikChildish_ThisIsChildish"]</xpath>
+		<!-- If it does, LET'S FASTING GOOOO!!! -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MalikChildish_MakeThisIsChildish"]/ingredients</xpath>
+					<success>Always</success>
+					<value>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<customSummary>writing materials</customSummary>
+									<categories>
+										<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+									</categories>
+									<thingDefs>
+										<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+									</thingDefs>
+								</filter>
+								<count>85</count>
+							</li>
+						</ingredients>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MalikChildish_MakeThisIsChildish"]/fixedIngredientFilter</xpath>
+					<success>Always</success>
+					<value>
+						<fixedIngredientFilter Inherit="False">
+							<categories>
+								<li MayRequire="mlie.rimwriter">RimWriter_BookMaterials</li>
+							</categories>
+							<thingDefs>
+								<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Paper</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MalikChildish_MakeThisIsChildish"]/workAmount</xpath>
+					<success>Always</success>
+					<value>
+						<workAmount>20000</workAmount>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="MalikChildish_MakeThisIsChildish"]/recipeUsers</xpath>
+					<success>Always</success>
+					<value>
+						<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Book_ScribeTable</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName="MalikChildish_MakeThisIsChildish"]/researchPrerequisites</xpath>
+					<success>Always</success>
+					<value>
+						<researchPrerequisites Inherit="False">
+							<li>VBE_Writing</li>
+						</researchPrerequisites>						
+					</value>
+				</li>
+			</operations>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
